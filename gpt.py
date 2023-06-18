@@ -3,30 +3,11 @@ import openai
 import random
 from keys import OPENAI_KEY
 from logger import logger
-import logging
 
 openai.api_key = OPENAI_KEY
 
 MAX_HISTORY = 15
 conversation_history = []
-
-# create logger
-logger = logging.getLogger('werkzeug')
-logger.setLevel(logging.DEBUG)
-
-# create file handler and set level to debug
-log_handler = logging.FileHandler('joulebot_gpt.log')
-log_handler.setLevel(logging.DEBUG)
-
-# create formatter
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-log_handler.setFormatter(formatter)
-
-# add the handler to the logger
-logger.addHandler(log_handler)
-
-# disable console output for the logger
-logger.propagate = False
 
 # Random flair :D
 def pinkie_pie_flair(text):
