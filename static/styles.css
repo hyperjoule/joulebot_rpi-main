@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff1fd;
+    color: #a031ba;
+    overflow-x: hidden;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1d5492;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+h1 {
+    text-align: center;
+}
+form {
+    margin: 0 auto;
+    width: 50%;
+    max-width: 400px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */            
+    font-size: 14px; /* Adjust the font size of the pre tag */
+    color: #2f3131;
+    margin: 5px;
+}
+#banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bubbles-container {
+    z-index: -1;
+    overflow: hidden;
+}
+#response {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 400px;
+    overflow-y: scroll;
+    padding-left: 15%;
+    padding-right: 15%;
+} 
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: bubble 10s infinite ease-in-out;
+}
+  
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-200px) scale(0.5);
+  }
+  100% {
+    transform: translateY(-400px) scale(1);
+  }
+}
+  
+.code-container {
+    border: 2px solid #a031ba;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: none;
+    max-height: 250px;
+    white-space: pre-wrap; /* This will wrap the text inside the container */
+}
+.code-block {
+    position: relative;
+    margin-bottom: 5px;
+}
+.copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #790373;
+    color: white;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 3px;
+    overflow: none;
+    width: auto; /* This will prevent the button from taking the full width */
+}
+.copy-button:hover {
+    background-color: #785576;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #a031ba;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 70%;
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+.image-container {
+    border: 2px solid #a031ba;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-block;
+    position: relative;
+}
+.image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(160, 49, 186, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.image-overlay:hover {
+    opacity: 1;
+}
+.image-overlay a {
+    color: white;
+    text-decoration: none;
+}
+.image-response {
+    display: flex;
+    justify-content: center;
+}
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+#microphone-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.fa-file-download {
+    font-size: 24px;
+}
+.joulebot-message {
+    text-align: left;
+    color: #a031ba;
+}
+.scroll-container {
+    position: relative;
+    max-height: 200px;
+    overflow: auto;
+}
+.user-message {
+    color: #1d5492;
+}

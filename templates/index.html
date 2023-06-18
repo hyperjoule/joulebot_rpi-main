@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joulebot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="banner-container">
+        <img src="{{ url_for('static', filename='banner.png') }}" alt="Banner" width="70%">        
+    </div>
+    <div id="bubble-container"></div>
+    <br>
+    <form onsubmit="submitForm(event)">
+        <input type="text" id="question" placeholder="Ask Joulebot a question...">
+        <button type="submit" id="askButton">Ask</button>
+    </form>
+    <div id="response"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="footer">
+        Joulebot - hyperjoule 2023
+    </div>
+</body>
+</html>
+
